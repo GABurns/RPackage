@@ -15,7 +15,7 @@ CalculateMeans <- function(data) {
       warning(paste("The row", names(data)[!numeric_rows], "contains non-numeric data did not have mean calculated"), call. = FALSE)
     }
     # Return only the rows where all values are numeric
-    return(data[, numeric_rows, drop = TRUE])
+    return(data[, numeric_rows, drop = FALSE])
   }
 
   data <- filter_numeric_rows(data)
